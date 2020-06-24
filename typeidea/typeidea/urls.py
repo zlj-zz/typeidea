@@ -25,6 +25,7 @@ from django.conf.urls import url, include
 from django.conf.urls.static import static
 from django.contrib import admin
 from django.contrib.sitemaps import views as sitemap_views
+from django.views.decorators.cache import cache_page
 
 # from blog.views import post_list, post_detail, PostDetailView
 from config.views import LinkListView
@@ -53,10 +54,12 @@ urlpatterns = [
         TagAutocomplete.as_view(),
         name='tag-autocomplete'),
     url(r'^rss|feed/', LatestPostFeed(), name='rss'),
-    url(r'^sitemap\.xml$', sitemap_views.sitemap,
-        {'sitemaps': {
-            'posts': PostSitemap
-        }}),
+    url(
+        r'^sitemap\.xml$',
+        cache_page(60 * 20, key_prefix='sitemap_cache_')(
+            sitemap_views.sitemap), {'sitemaps': {
+                'posts': PostSitemap
+            }}),
     url(r'^comment/$', CommentView.as_view(), name='comment'),
     url(r'^author/(?P<owner_id>\d+)/$', AuthorView.as_view(), name='author'),
     url(r'^search/$', SearchView.as_view(), name='search'),
