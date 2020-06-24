@@ -13,16 +13,15 @@ MIDDLEWARE += [
     'silk.middleware.SilkyMiddleware',
 ]
 
-INTERNAL_IPS = ['127.0.0.1']
+# INTERNAL_IPS = ['127.0.0.1']
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'typeidea',
-        'USER': 'root',
-        'PASSWORD': 'mysql',
-        'HOST': '127.0.0.1',
-        'POST': 3306,
-    },
-}
-
+# DATABASES = {
+# 'default': {
+# 'ENGINE': 'django.db.backends.mysql',
+# 'NAME': 'typeidea',
+# 'USER': 'root',
+# 'PASSWORD': 'mysql',
+# 'HOST': '127.0.0.1',
+# 'POST': 3306,
+# },
+# }
