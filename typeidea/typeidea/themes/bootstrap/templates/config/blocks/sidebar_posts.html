@@ -1,5 +1,8 @@
+{% load cache %}
+{% cache 50 sidebar %}
 <ul>
   {% for post in posts %}
   <li> <a href="{% url 'post-detail' post.id %}">{{ post.title }}</a></li>
   {% endfor %}
 </ul>
+{% endcache %}
