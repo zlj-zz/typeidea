@@ -33,7 +33,7 @@ MarkupSafe==1.1.1
 mistune==0.8.4
 odfpy==1.4.1
 openpyxl==3.0.3
-Pillow==5.1.0
+Pillow==7.1.0
 pycodestyle==2.6.0
 Pygments==2.6.1
 PyMySQL==0.9.3
