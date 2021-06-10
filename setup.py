@@ -17,7 +17,7 @@ setup(
     # },
     include_package_data=True, # 方法二：配合 MANIFEST.in 文件
     install_requires=[
-        'django~=1.11',
+        'django>=1.11,<3.0',
     ],
     extras_require={'ipython': ['ipython==6.2.1']},
     scripts=[
