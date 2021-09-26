@@ -9,3 +9,9 @@
 - 使用 `django-silk` 分析项目性能，实现优化
 - 使用 **MySQL** 数据库存储数据
 - 使用 **Redis** 数据库实现缓存、优化查询
+
+
+
+**部署 heroku** 
+
+部署地址：[https://afternoon-oasis-11417.herokuapp.com/](https://afternoon-oasis-11417.herokuapp.com/)
